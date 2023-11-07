@@ -1,0 +1,85 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+/* Resets */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+
+	--paragraph-color: #4b5563;
+
+}
+
+/* Typography */
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #333;
+	background-color: #fff;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+	color: #b0b0b0;
+
+}
+
+li {
+	list-style: none;
+
+}
+
+b{
+	font-weight: 600;
+
+}
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	min-height: 100vh;
+	margin:0;
+	justify-content: space-between;
+	gap:2em;
+}
+
+.content-wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	
+}
+
+p,
+hr,div,section {
+	width: clamp(20ch, 100%, 65ch);
+}
+
+hr{
+	opacity: 0.2;
+	margin: 1em 0;
+}
