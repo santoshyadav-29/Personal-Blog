@@ -69,18 +69,12 @@ body {
 }
 
 .content-wrapper {
-	max-width: 800px;
+	width: clamp(20ch, 100%, 75ch);
 	margin: 0 auto;
 	padding: 0 1rem;
 
 }
 
-p,
-hr,
-div,
-section {
-	width: clamp(20ch, 100%, 65ch);
-}
 
 hr {
 	opacity: 0.2;
