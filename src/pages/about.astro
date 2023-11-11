@@ -1,80 +1,113 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 ---
 
 <Layout title="FAQ" description="This is the Aout page">
-  <div class="faq">
+  <section class="faq">
     <h1>FAQ</h1>
 
     <div class="faq-section">
-        <button>What is this</button>
-        <p >This is a website that I made to learn about Astro and Tailwind CSS.</p>
+      <div class="faq">
+        <div class="ques">What is My name?</div>
+        <div class="ans hide">
+          <p class="">My name is Santosh, please remember it👽.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="ques">What is My name?</div>
+        <div class="ans hide">
+          <p class="">My name is Santosh, please remember it👽.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="ques">What is My name?</div>
+        <div class="ans hide">
+          <p class="">My name is Santosh, please remember it👽.</p>
+        </div>
+      </div>
     </div>
-    
-  
-  </div>
+  </section>
 </Layout>
 
+
 <script>
+  const faqs = document.querySelectorAll('.faq');
 
-   const buttons = document.querySelectorAll('button');
+  faqs.forEach((faq) => {
+    type Ques= any
+    const question:Ques = faq.querySelector('.ques');
 
-    buttons.forEach(button => {
-         button.addEventListener('click', () => {
-              const p = button.nextElementSibling;
-              p.classList.toggle('hidden');
-         })
-    })
-  
+    question.addEventListener("click", () => {
+      // Toggle 'active' class only for the clicked FAQ item
+      faq.classList.toggle('active');
 
-
-   
-
+      // Close other FAQ items
+      faqs.forEach((otherFaq) => {
+        if (otherFaq !== faq) {
+          otherFaq.classList.remove('active');
+        }
+      });
+    });
+  });
 </script>
+
+
+
+
+
+
+
+
+=
 <style>
-    .hidden{
-        animation: turnOff 0.1s;
-
-    }
-    @keyframes delay {
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-        
-    }
-    .faq-section{
-        margin: 1rem;
-        padding: 1rem;
-        
-    }
-    .faq-section button{
-        background-color: #1f2937;
-        color: white;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border: none;
-       
-        text-align: left;
-    }
-
-
-    
-   
   
 
-    .faq-section p{
-        margin: 1rem;
-        padding: 1rem;
-        background-color: #1f2937;
-        color: white;
-        border-radius: 0.5rem;
-        animation: delay 0.5s ease-in-out;
-    }
+  .faq-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .faq {
+  }
+  .faq-section .ques {
+    background-color: #1f2937;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
 
+  .faq-section p {
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+
+    box-shadow: 1px 3px 3px 0px grey;
+  }
+
+  .ans{
+    max-height: 0;
+    overflow: hidden;
+
+  }
+
+  .faq.active .ans {
+    max-height: 300px;
+    animation: fade 0.3s ease-in-out;
+  }
+
+  @keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
     
+  }
+
 
 </style>
