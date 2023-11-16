@@ -26,7 +26,18 @@ import Education from "../components/Education.astro";
   </main>
 </Layout>
 
-<style>
+<style is:global>
+
+  a{
+    text-decoration:underline;
+    color: rgba(0, 115, 255, 0.796);
+
+  }
+  a:hover{
+    color: rgba(8, 92, 194, 0.796);
+    text-decoration:none;
+  }
+
   .more-about {
     display: flex;
     flex-direction: column;
