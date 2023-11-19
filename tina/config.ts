@@ -1,10 +1,12 @@
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
+const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineConfig({
-  clientId: "bb894674-f7d7-4483-aba5-715619acf3bf", // Get this from tina.io
-  token: "bbf35148b29f58d0fc0829c5a9d87293b989c987", // Get this from tina.io
+  branch,
+  clientId: null, // Get this from tina.io
+  token: null, // Get this from tina.io
 
   build: {
     outputFolder: "admin",
@@ -19,8 +21,8 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "blog",
-        label: "Blogs",
+        name: "post",
+        label: "Posts",
         path: "src/content/blog",
         fields: [
           {
@@ -39,17 +41,16 @@ export default defineConfig({
           {
             type: "datetime",
             name: "pubDate",
-            label: "Date",
+            label: "Publication Date",
             required: true,
           },
           {
             type: "datetime",
             name: "updatedDate",
             label: "Updated Date",
-            required: false,
           },
           {
-            type: "string",
+            type: "image",
             name: "heroImage",
             label: "Hero Image",
           },

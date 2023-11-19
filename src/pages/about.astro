@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="FAQ" description="This is the Aout page">
-  <section class="faq">
+<Layout title="FAQ" description="This is the About page">
+  <section >
     <h1>FAQ</h1>
 
     <div class="faq-section">
@@ -31,45 +31,26 @@ import Layout from "../layouts/Layout.astro";
 
 
 <script>
-  const faqs = document.querySelectorAll('.faq');
-
-  faqs.forEach((faq) => {
-    type Ques= any
-    const question:Ques = faq.querySelector('.ques');
-
-    question.addEventListener("click", () => {
-      // Toggle 'active' class only for the clicked FAQ item
-      faq.classList.toggle('active');
-
-      // Close other FAQ items
-      faqs.forEach((otherFaq) => {
-        if (otherFaq !== faq) {
-          otherFaq.classList.remove('active');
-        }
-      });
-    });
-  });
+  const ques = document.querySelectorAll('.faq .ques');
+    const ans= document.querySelectorAll('.faq .ans');
+    for(let i=0;ques.length;i++){
+      ques[i]?.addEventListener('click',()=>{
+        ans[i]?.classList.toggle('hide')
+      }
+      )
+    }
+   
+  
 </script>
 
-
-
-
-
-
-
-
-=
 <style>
-  
-
   .faq-section {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1em;
   }
-  .faq {
-  }
+ 
   .faq-section .ques {
     background-color: #1f2937;
     color: white;
@@ -88,25 +69,10 @@ import Layout from "../layouts/Layout.astro";
     box-shadow: 1px 3px 3px 0px grey;
   }
 
-  .ans{
-    max-height: 0;
+  .faq .hide {
+    /* max-height: 0px; */
     overflow: hidden;
 
-  }
-
-  .faq.active .ans {
-    max-height: 300px;
-    animation: fade 0.3s ease-in-out;
-  }
-
-  @keyframes fade {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-    
   }
 
 
