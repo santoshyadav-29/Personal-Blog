@@ -4,7 +4,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Layout from "../layouts/Layout.astro";
 import Education from "../components/Education.astro";
 import Aboutme from "../components/Aboutme.astro";
-import Project from '../components/Project.astro'
+import Project from '../components/Project.astro';
+import Blogs from '../components/Blogs.astro';
+
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -12,6 +14,7 @@ import Project from '../components/Project.astro'
     <Introduction />
 	<Education />
   <Project/>
+ <Blogs/>
   <Aboutme/>
   
   </main>
