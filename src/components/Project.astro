@@ -1,0 +1,39 @@
+---
+import project from './project.js'
+
+---
+
+<div class="project">
+  <ul>
+    <li><b>Recent Project</b></li>
+    <li>
+      {
+          project.map((item) => (
+              <p>
+                  <a href="./" target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                  </a>
+                  {item.description}
+              </p>
+          ))
+      }
+    </li>
+  </ul>
+</div>
+  
+  <style>
+   
+    .project {
+    }
+  
+    .project ul {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+  
+    .project ul a {
+      font-weight: 500;
+      text-decoration: none;
+    }
+  </style>
+  
