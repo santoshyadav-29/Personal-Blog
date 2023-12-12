@@ -1,11 +1,11 @@
 {
-  "name": "Santosh yadav",
+  "name": "santosh",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
     "start": "astro dev",
-    "build": "tinacms build && astro check && astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -19,5 +19,8 @@
     "dotenv": "^16.3.1",
     "tinacms": "^1.5.22",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4"
   }
 }

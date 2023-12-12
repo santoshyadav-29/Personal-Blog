@@ -5,26 +5,31 @@ const posts = await getCollection("blog");
 const blogs = posts.slice(0, 3);
 
 ---
-<hr/>
+
 <div class="blogs">
   <ul>
     <li><b>Recent Blogs</b></li>
-    <li>
+    <li class="blog">
       {
           blogs.map((item) => (
-              <p>
+              
+          <p>
                   <a href="./" target="_blank" rel="noopener noreferrer">
                       {item.data.title}
                   </a>
-                  {" "+ item.data.description}
-                  
-              </p>
+                 
+                      {item.data.description}
+                    </p>
+                    <hr/>
+                 
+               
+              
           ))
       }
     </li>
   </ul>
 </div>
-<hr/>
+
   
   <style>
    
@@ -39,6 +44,14 @@ const blogs = posts.slice(0, 3);
     .blogs ul a {
       font-weight: 500;
       text-decoration: none;
+    }
+
+
+   
+
+    .blog p {
+        display: flex;
+        flex-direction: column;
     }
   </style>
   

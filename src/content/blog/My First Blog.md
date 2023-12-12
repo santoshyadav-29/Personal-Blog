@@ -1,7 +1,7 @@
 ---
 title: My First Blog
-description: My First Blog
-pubDate: 2023-11-08T18:15:00.000Z
+description: This blog is about the insecurities we have in our lives. Specially me.
+pubDate: 2001-09-19T18:15:00.000Z
 ---
 
 **Hello there👋,** and **thank you** for taking the time to visit my blog. Ever been stuck wondering what to name your very first blog post? I sure was, and you won't believe how much stress that caused me. In the end, I decided to go with something as simple as '**My First Blog**' Sounds kinda basic, right? But trust me, it's works.

@@ -1,6 +1,6 @@
 ---
 title: My new Post is here
-description: My First Blog
+description: A random Blog to test Tina CMS
 pubDate: 2023-11-08T18:15:00.000Z
 ---
 

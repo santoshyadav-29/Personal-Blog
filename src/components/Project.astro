@@ -6,7 +6,7 @@ import project from './project.js'
 <div class="project">
   <ul>
     <li><b>Recent Project</b></li>
-    <li>
+    <li class="proj">
       {
           project.map((item) => (
               <p>
@@ -15,6 +15,8 @@ import project from './project.js'
                   </a>
                   {item.description}
               </p>
+              <hr />
+              
           ))
       }
     </li>
@@ -34,6 +36,11 @@ import project from './project.js'
     .project ul a {
       font-weight: 500;
       text-decoration: none;
+    }
+
+    .proj p{
+      display: flex;
+      flex-direction: column;
     }
   </style>
   

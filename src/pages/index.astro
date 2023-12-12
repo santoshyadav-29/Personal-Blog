@@ -12,10 +12,15 @@ import Blogs from '../components/Blogs.astro';
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main>
     <Introduction />
+    <hr/>
 	<Education />
+  <hr/>
   <Project/>
+  <hr/>
  <Blogs/>
+  <hr/>
   <Aboutme/>
+
   
   </main>
 </Layout>
@@ -36,5 +41,16 @@ import Blogs from '../components/Blogs.astro';
     flex-direction: column;
 
     gap: 1rem;
+  }
+
+  
+</style>
+
+<style>
+  hr{
+    margin: -1.1em 0 1em 0;
+   
+    
+
   }
 </style>
