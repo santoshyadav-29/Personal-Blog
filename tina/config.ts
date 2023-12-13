@@ -48,7 +48,7 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "string",
+            type: "image",
             name: "heroImage",
             label: "Hero Image",
             required: false,

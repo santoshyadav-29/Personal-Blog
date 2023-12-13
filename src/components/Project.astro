@@ -10,7 +10,7 @@ import project from './project.js'
       {
           project.map((item) => (
               <p>
-                  <a href="./" target="_blank" rel="noopener noreferrer">
+                  <a href={item.source} target="_blank" rel="noopener noreferrer">
                       {item.name}
                   </a>
                   {item.description}
