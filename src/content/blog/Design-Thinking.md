@@ -10,3 +10,8 @@ pubDate: 2024-04-01T18:15:00.000Z
 heroImage: /Blog Images/IN_DEsignthinking_Design-Thinking-2.png
 ---
 
+# Design Thinking
+
+**It is a way** of designing what we are thinking about just like imagining a *hat and a stick* when thinking about magician. Imagining a light blub or question mark when thinking *about ideas etc*
+
+![](/IMG_20200315_184742_0.jpg)
