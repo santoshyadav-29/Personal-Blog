@@ -14,11 +14,11 @@ const blogs = posts.slice(0, 3);
           blogs.map((item) => (
               
           <p>
-            <a href={`/blog/${item.slug}/`}>
+                  <a href={`/blog/${item.slug}/`}>
                       {item.data.title}
                   </a>
                  
-                      {item.data.description}
+                      {item.data.description.slice(0, 100)}...
                     </p>
                     <hr/>
                  
